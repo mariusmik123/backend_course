@@ -1,0 +1,180 @@
+                        -------     navigations commands ---------------------------------------------------
+
+'pwd' == giver current path / trejectery
+
+'cd' == går til /c/Users/User
+
+'ls' == lister indhold i current file
+
+'cd valgfriFil' == går ind i en valgfri fil i mappen hvis filen findes i den nuværende mappe. 
+
+'cd ..' == går ud af en mappe
+
+'ls' --help == --help bruges til at finde ud af hvordan man bruger andre commands
+
+'ls -l' == viser bare ekstra info til filerne
+
+'whoami' == viser hvem you are login as
+
+ctrl c == stopper et blocked terminal ved blandt andet at stoppe med at run en server
+ctrl c kan også bruges hvis man ikke vil trykke enter på en command men fortyder og bare vil videre
+
+ctrl d == lukker hele terminalen
+
+| Tast     | Betyder            | Brug      |
+| -------- | ------------------ | --------- |
+| Ctrl + D | EOF (færdig input) | ✅ korrekt |
+| Ctrl + C | Kill / abort       | ❌ nødstop |
+
+
+arrows == bruges til at gå tilbage mellem tidligere brugte commands
+
+tab == bruges til at auto finish
+
+ctrl l == clears hvad man lige har lavet
+'clears' == clears hvad man lige har lavet (det samme som ctrl l)
+
+
+////// man kan nemt kombinere commands fks.::
+
+'ls -a' == -a viser alle filer også de skjulte
+
+'ls -a -l' eller 'ls -al'== viser alle filer også skjulte og giver ekstra info
+
+'ls -r' == i omvendt række følge
+
+'cd /' == tager dig til the root af computeren
+
+'cd -' == tager dig tilbage til den sidste folder du var i(ikke nødvendigvis the parent folder)
+
+
+
+-----------------------------      håndtering af filer -----------------------------------------
+'start [filename]' == how to start a file from your GUI = Graphical User Interface(aka dit normale windows miljø)
+'start [url]' == åbner url i default browser
+
+'mkdir [wantedName]' == make directionary/folder fra hvor du står lige nu 
+
+'rm -r [folderName]' == sletter en folder (her kan '-ri eller -r -i' også bruges for godkendelse)
+'rm -rf [folderName]' == force sletter folders som ikke kan slettes pga indhold
+
+'touch [wantedFileName]' == skaber en fil med det navn du ønsker
+'touch [file1] [file2]' == touch kan sagtens skabe flere filer i en command
+
+'rm [fileName]' == sletter filer
+
+'rm [file1] [file2]' == rm kan sagtens sletter flere fil i en command
+
+'rm -i [file]' == spørger om du vil slette en fil --> med svar enten 'y' eller 'n'
+
+'cp [orginalFil] [mappe]/[kopiNacn]' == cp bruges til at kopier filer 
+fks.$ cp index.html source/index1.html laver en kopi af index.html
+
+'mv [filename] [newTrejectery]' == fks. '$ mv index.html source/index.html'
+kan give nyt navn fks '$ mv index.html source/newName.html'
+
+'mv [orginaleNavn] [nye navn]' == mv kan bruges til at rename filer fks. '$ mv source src'
+
+'code [filnavn]' == åbner fil i vs code fks. 'code index.html'
+
+---------------------------------      edits i filer         ------------------------------------
+
+læse ::::::::::::
+'cat [filename]' == bruges til at read filer men kan også mere
+
+skrive :::::::::: 
+'cat > [filename]' enter 'denne næste linje vil blive skrevet' 
+fks:
+'$ cat > file1.txt'
+'Hello world'
+efterfulgt af ctrl d ikke 
+
+'cat >> [filnavn]' == appends text istedet for at erstatte.
+men 'cat' bruges primært til at læse filer foodi man kan bruge echo istedet.
+
+'cat -n [filnavn]' == viser linje numre også
+
+'echo "Hello World"' == displayer hello world i terminal
+
+'echo "ny text" >> [filnavn]' == appender ny text enkelt '>' kan overskrive 
+fkes: $ echo "new line" >> file1.txt
+
+'less [filname]' == tillader at man kan se en files content men zoomet ind med scroll
+man bruger q til at komme tilbage ud af det.
+
+'head -n [antal linjer] [filnavn]' == viser kun et bestemt antal linjer fra toppen af
+
+'tail -n [antal linjer] [filnavn]' == viser kun et bestemt antal linjer fra bunden af filen.
+
+--------------------------     nano ------------------------------
+nano er en text editer som fungere i terminalen 
+ feks.
+ 'nano file1.txt'
+
+ viser :
+ '$ cat >> file1.txt
+ world
+  GNU nano 8.7                                            file1.txt                                             Modified  
+hello
+world
+new line
+'
+
+ctrl x == komme ud af nano editer, men først spørges man om man vil gemme
+
+------------------------------- search i filer       ----------------------------------
+'grep "ønsket tekst" [filnavn]' == finder tekst sim indeholder din ønskede tekst
+feks: $ grep "ll" file1.txt
+hello
+
+grep kan også bruge regular expressions
+
+'$ touch [ønsket filnavn-]{001..100}.[ønsket filslutning]' == skaber 100 filer fra 001 til 100
+feks. '$ touch file-{001..100}.txt'
+
+
+///////////// find kan bruges til at finde filer efter forskellige conditions f.eks. navn, empty
+'find [dirname] -name [filename]' == bruges til at finde alle filer som passer 'filename' 
+men filename kan indholde regular expressions feks. '$ find . -name "file-00*.txt"' 
+
+'find [dirname] -empty' == giver alle tomme filer i directionary
+
+delete med 'find':
+'find [dirname] "[filename]" -delete' == sletter alle filer som paser til filename her bruges også ofte regular expressions
+
+tilføj resultater af find ved brug af > feks:
+'find [dirname] -name "[filename]" > [endFile]' == dette finder alle filer som matcher conditions
+og opretter derefter en ny fil eller bruger en eksisterende fil ti lat gemme find resultaterne.
+
+-------------------------------    sym link           -----------------------------------
+sym link er en fil som pejer på et andet trejectery.
+'ln -s [filename] [symlinkname]' == det skaber en genvej til en fil/folder som du kan placere et
+andet sted. 
+feks:  'ln -s ~/Downloads dlds' skaber et symlink til downloads og kalder genvejen dlds, og gememr 
+genvejen i den folder jeg står i og laver symlinket.
+
+
+--------------------------  tarballfiles == compres folders kinda like a zip   -------------------------------
+'tar -czvf [newtarballfilename] [original file]' == dette skaber en ny kopi folder/fil men i tar.gz 
+version som vistnok bare er en compressed fil.
+
+feks: 'tar -czvf source.tar.gz src' == de nye filer skal nok slutte på: 
+project.tar
+project.tar.gz
+project.tgz
+project.tar.bz2
+
+Det er:
+- mange filer + mapper samlet i én fil
+ ofte også komprimer
+
+
+for at pakke en tarball fil ud skal man bruge:
+'tar -xvzf file.tar.gz'
+
+
+'tar -tzvf [filename]' == for bare at se hvad der er inde i en ta kan man bruge 
+
+
+'history' == viser de sidste mange commands kørt og giver et id til id
+'![id]' == køre en command igen som du har id på fra history

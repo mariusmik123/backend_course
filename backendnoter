@@ -1,0 +1,83 @@
+http = hypertext transfer protocol = the way computers speak
+
+DNS = domain name system == transelates servernames to ip addresses
+
+ip addresses = unik number to identify every computers
+
+API = application programming interface = How we know what to ask for
+
+- follows a structure CRUD = creat, read, update or deleted
+
+Http Methods = defines what kind of action to request = API verbs
+
+| HTTP-metode | Hvad den bruges til (én sætning)                                      |
+| ----------- | --------------------------------------------------------------------- |
+| **GET**     | Bruges til at hente data fra serveren uden at ændre noget.            |
+| **POST**    | Bruges til at sende nye data til serveren, fx når man opretter noget. |
+| **PUT**     | Bruges til at opdatere _hele_ et eksisterende element på serveren.    |
+| **PATCH**   | Bruges til at opdatere _dele_ af et eksisterende element.             |
+| **DELETE**  | Bruges til at slette data på serveren.                                |
+
+url = an end point for the api
+
+response body = the answer the server returns back
+
+status code = indication of api calls status 200 = ok, 201 = new resaource created, 400 = bad request
+
+rest = representational state transfer -> follows a structed way where clients interact by urls or http methods
+
+restfull apis = uses rest
+
+graphql api = lets you request any thing therefor the excact thing you need
+
+---------------------- data bases -------------------------------------
+there is no kind that fits all
+
+relational databases = stores data in structured tables with rows and columns - uses SQL structured query language - used when data is higly structured together such as banks wherrelationships between data is important
+
+non - relational databases = noSQL, offers more flexibility - used with less depending data - can be simple like key value pair storing or just documents
+
+queries = the way the server interacts with databases, which the database then sends back data/deleted data , which the server transforms to json and sends to client
+
+raw queries = communicates directly in the database understanding
+-- RAW SQL
+SELECT \* FROM users;
+
+orm = object relational mappers = a way to write queries in a programming language - communicates by libraries with the database
+// ORM (fx Sequelize)
+User.findAll();
+
+----------------------------- the big picture / aka backend structure -----------------------
+monolithic arhitecture
+
+- most popular
+- all components of the application is combined into a single unified codebase
+
+  pros:
+
+- simple to develop and deploy
+- eisier to debug -> everything in same place
+  Cons:
+- messy for big apps
+- hard to scale some components
+
+microservice architecture
+
+- application broken down into smaller independent services
+- each service handles a specific buisness function fx. authentication, payment...
+- communicates by apis so no longer 1 fronend-backend connection through an api
+  pros
+- good for big enterprice buisness that is scaling
+
+serverless achitecture
+
+- underlying infrastructure is handled by a cloud provider fx. aws lambda
+- used by next.js applications
+
+pros:
+
+- good for startsups
+- good for rapid prototyping
+- or apps with spiky traffic (easy to increase or decrease handable activity)
+
+
