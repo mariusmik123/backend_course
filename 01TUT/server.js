@@ -1,13 +1,39 @@
-const http = require("http");
-const { json } = require("stream/consumers");
+// node runs on a servver - not a browser
+// the console is the terminal window
+console.log("hello world");
+// global object instead of a window object
+//console.log(global);
+// common core modules that we will explore:
+// CommonJS modules instead of ES6 modules
 
-const server = http.createServer((req, res) => {
-  res.writeHead(200, { "Content-Type": "text/plain" });
-  res.end("Jeg fatter intet!!!!!");
-  //res.writeHead(200, { "Content-Type": "application/json" });
-  //res.end(JSON.stringify(http));
-});
+const os = require("os");
+const path = require("path");
+/*
+const math = require("./math");
 
-server.listen(3000, () => {
-  console.log("Server kører på http://localhost:3000");
-});
+console.log(math.add(2, 3));
+*/
+
+const { add, sub, mul, div } = require("./math");
+
+console.log(add(2, 9), sub(99, 9), div(mul(5, 20), 10));
+
+/*console.log(os.type());
+
+console.log(os.version());
+
+console.log(os.homedir());
+
+console.log(__dirname);
+
+console.log(__filename);
+
+console.log(path.dirname(__filename));
+
+console.log(path.basename(__filename));
+
+console.log(path.extname(__filename));
+
+console.log(path.parse(__filename));*/
+
+// node is missing som js apis fx fetch --> might need to intergrate libraries to compensate
