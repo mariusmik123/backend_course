@@ -2,15 +2,17 @@
 
 const fs = require("fs");
 
+
+
 //////////////////////////////////    READ FILES   //////////////////////////////
 // syntax ->  fs.readFile(path, options, callback);
-fs.readFile(
+
+
+//fs.readFile(
   "readme.md",
   /*"utf8"*/ (err, data) => {
     if (err) throw err;
-    // console.log(data.toString() /* hvis ikke tostring() så får man buffer når ingen encoder(utf8)*/ );
-  }
-);
+    //console.log(data.toString() /* hvis ikke tostring() så får man buffer når ingen encoder(utf8)*/);  });
 // ^^^^^^^^^^^^^readFile er async tho
 
 ////////////////////////////        WRITE TO FILES       /////////////////////////////////////
@@ -57,6 +59,9 @@ fs.readFile("readme.md", "utf8", (err, data) => {
   }
 });
 
+
+
+
 //////////////// --------------  HOW TO USE PATH MODULE TO PREVENT HARDCODING FILES
 const path = require("path");
 
@@ -99,10 +104,21 @@ async function promiseApRe(file, text) {
   const reader = await fsPromsises.readFile(file, "utf8");
   return reader;
 }
+
+const rs = fs.createReadStream(path.join(__dirname, "files", "newFile.txt"), {
+  encoding: "utf8",
+});
+
+const ws = fs.createWriteStream(path.join(__dirname, "files", "newFile.txt"));
+
+rs.on("data", (datachunk) => {
+  ws.write(datachunk);
+});
+
 async function main() {
   try {
     console.log(
-      await promiseApRe(path.join(__dirname, "files", "elever"), "jens\n")
+      await promiseApRe(path.join(__dirname, "files", "elever.txt"), "jens\n")
     );
   } catch (error) {
     console.log(error);
@@ -110,4 +126,4 @@ async function main() {
 
   console.log(fsPromsises);
 }
-main();
+main()
