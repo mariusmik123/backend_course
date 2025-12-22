@@ -59,3 +59,15 @@ console.log("version control");
 | `>=`    | `>=3.1.11` | Mindst denne version       | Sjældent                      |
 | `<`     | `<4.0.0`   | Mindre end                 | Avanceret styring             |
 */
+
+// "npm update" = cli command for check af updates
+
+//-----------------------------          Uninstall packages
+console.log(` 
+
+    terminal: 
+    "npm rm [packagename] [evt flag f.eks. -D, ikke altid nødvendigt]"
+
+    obs. npm rm vil ikke remove fra script
+
+    `);

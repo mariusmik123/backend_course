@@ -10,11 +10,11 @@ const fs = require("fs");
 
 //fs.readFile(
   "readme.md",
-  /*"utf8"*/ (err, data) => {
+  /*"utf8" (err, data) => {
     if (err) throw err;
-    //console.log(data.toString() /* hvis ikke tostring() så får man buffer når ingen encoder(utf8)*/);  });
+    //console.log(data.toString() /* hvis ikke tostring() så får man buffer når ingen encoder(utf8));  });*/
 // ^^^^^^^^^^^^^readFile er async tho
-
+  
 ////////////////////////////        WRITE TO FILES       /////////////////////////////////////
 const TESTDATA = "dette er mit indsættende data";
 const NEWFILE = "newFile.txt";
@@ -105,15 +105,6 @@ async function promiseApRe(file, text) {
   return reader;
 }
 
-const rs = fs.createReadStream(path.join(__dirname, "files", "newFile.txt"), {
-  encoding: "utf8",
-});
-
-const ws = fs.createWriteStream(path.join(__dirname, "files", "newFile.txt"));
-
-rs.on("data", (datachunk) => {
-  ws.write(datachunk);
-});
 
 async function main() {
   try {
