@@ -1,0 +1,10 @@
+20251223	11:25:53;	1fb29bcd-7e63-451f-8c90-61b05d2f67b2	/new-page	GET
+
+20251223	11:25:54;	a9e6e7c6-c7f3-46e5-9ac7-bf4b9e2af3fc	/.well-known/appspecific/com.chrome.devtools.json	GET
+
+20251223	11:25:54;	2af6aba5-ead0-4795-89ff-35f6eb8b17dc	/css/style.css	GET
+
+20251223	11:25:54;	977ffa4e-871b-4494-b8c4-586dd999077e	/img/img1.jpg	GET
+
+20251223	11:25:54;	d25f7c8f-57b1-46a0-a23b-8612067a342f	/favicon.ico	GET
+
