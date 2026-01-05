@@ -15,6 +15,8 @@ const PORT = process.env.PORT || 5000;
 i g m         flags
 */
 
+const regex = /^A-Z?a-z+$/;
+
 // builtin middleware
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
