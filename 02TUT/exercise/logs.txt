@@ -1,0 +1,20 @@
+20260101	14:54:36	GET	req:/about/	null	C:\Users\User\Desktop\javascript\minback-end\02TUT\exercise\views2\about.html
+
+20260101	19:00:48	GET	req:/about/	res 200	C:\Users\User\Desktop\javascript\minback-end\02TUT\exercise\views2\about.html
+
+20260101	22:21:10	GET	req:/about.html	res 200	C:\Users\User\Desktop\javascript\minback-end\02TUT\exercise\views2\about.html
+
+20260101	22:21:10	GET	req:/.well-known/appspecific/com.chrome.devtools.json	res 200	C:\Users\User\Desktop\javascript\minback-end\02TUT\exercise\views2\404.html
+
+20260101	22:27:55	GET	req:/	res 200	C:\Users\User\Desktop\javascript\minback-end\02TUT\exercise\views2\index.html
+
+20260101	22:27:55	GET	req:/.well-known/appspecific/com.chrome.devtools.json	res 200	C:\Users\User\Desktop\javascript\minback-end\02TUT\exercise\views2\404.html
+
+20260101	22:27:55	GET	req:/css/style.css	res 200	C:\Users\User\Desktop\javascript\minback-end\02TUT\exercise\views2\404.html
+
+20260101	22:28:22	GET	req:/error	res 200	C:\Users\User\Desktop\javascript\minback-end\02TUT\exercise\views2\404.html
+
+20260101	22:28:22	GET	req:/.well-known/appspecific/com.chrome.devtools.json	res 200	C:\Users\User\Desktop\javascript\minback-end\02TUT\exercise\views2\404.html
+
+20260101	22:28:22	GET	req:/css/style.css	res 200	C:\Users\User\Desktop\javascript\minback-end\02TUT\exercise\views2\404.html
+

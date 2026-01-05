@@ -8,3 +8,27 @@
 
 20251223	11:25:54;	d25f7c8f-57b1-46a0-a23b-8612067a342f	/favicon.ico	GET
 
+20251223	13:13:18;	cc5678c2-cc37-41f3-b56f-807844c4d77d	/new-page	GET
+
+20251223	13:13:18;	9708e43b-537c-4ce8-be78-e4b85f2476cc	/.well-known/appspecific/com.chrome.devtools.json	GET
+
+20251223	13:13:18;	24d05e34-2477-484e-a87c-07a3db8086c5	/css/style.css	GET
+
+20251223	13:13:18;	e7456e53-c2ca-4380-bbf7-937c51e3caa1	/img/img1.jpg	GET
+
+20251223	13:13:20;	f3e01296-7feb-44b0-a2d7-a949767f76f0	/new-page	GET
+
+20251223	13:13:20;	a6a08387-a4cc-4f81-8073-ffc7046a006b	/.well-known/appspecific/com.chrome.devtools.json	GET
+
+20251223	13:13:20;	ecd63a05-57b2-43ca-82ed-954c32bedbec	/css/style.css	GET
+
+20251223	13:13:20;	7a27ac7f-04bd-4c48-9298-3df7a963947a	/img/img1.jpg	GET
+
+20251223	13:13:22;	cdfa1674-03c0-474b-8768-8163487042d9	/new-page	GET
+
+20251223	13:13:22;	18ff55f7-094a-4f39-90ab-f807c0c01949	/.well-known/appspecific/com.chrome.devtools.json	GET
+
+20251223	13:13:22;	7e111f8e-2425-4ad1-84e6-997c86bd0676	/css/style.css	GET
+
+20251223	13:13:22;	6ef10c49-3f8e-4a68-a601-3d4d2f8996b4	/img/img1.jpg	GET
+
